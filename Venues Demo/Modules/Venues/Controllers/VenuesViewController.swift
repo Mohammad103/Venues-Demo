@@ -43,15 +43,10 @@ class VenuesViewController: BaseViewController {
     
     // MARK: - Helpers
     private func configureLocation() {
-        if !CLLocationManager.locationServicesEnabled() {
-            return
-        }
-        
-        locationManager = CLLocationManager()
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+        startUpdatingLocation()
     }
     
     private func addPullToRefresh() {
@@ -96,6 +91,12 @@ class VenuesViewController: BaseViewController {
         }
     }
     
+    private func startUpdatingLocation() {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
     private func handleLocationSingleUpdate() {
         locationType = .singleUpdate
         typeBarButton.title = "Single Update"
@@ -105,7 +106,7 @@ class VenuesViewController: BaseViewController {
     private func handleLocationRealtime() {
         locationType = .realtime
         typeBarButton.title = "Realtime"
-        locationManager.startUpdatingLocation()
+        startUpdatingLocation()
     }
     
     // MARK: - Actions
@@ -176,6 +177,7 @@ extension VenuesViewController: VenuesViewModelDelegate {
         tableView.emptyDataSetSource = self
         refreshControl?.endRefreshing()
         hideLoadingIndicator()
+        tableView.reloadData()
         showError(withMessage: errorMessage)
     }
     
