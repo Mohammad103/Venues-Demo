@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8459947F24BB186C008756E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459947E24BB186C008756E3 /* AppDelegate.swift */; };
 		8459948124BB186C008756E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459948024BB186C008756E3 /* SceneDelegate.swift */; };
-		8459948324BB186C008756E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459948224BB186C008756E3 /* ViewController.swift */; };
-		8459948624BB186C008756E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8459948424BB186C008756E3 /* Main.storyboard */; };
+		8459948324BB186C008756E3 /* VenuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459948224BB186C008756E3 /* VenuesViewController.swift */; };
+		8459948624BB186C008756E3 /* Venues.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8459948424BB186C008756E3 /* Venues.storyboard */; };
 		8459948824BB186E008756E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8459948724BB186E008756E3 /* Assets.xcassets */; };
 		8459948B24BB186E008756E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8459948924BB186E008756E3 /* LaunchScreen.storyboard */; };
 		8459949624BB186E008756E3 /* Venues_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459949524BB186E008756E3 /* Venues_DemoTests.swift */; };
@@ -36,8 +36,8 @@
 		8459947B24BB186C008756E3 /* Venues Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Venues Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8459947E24BB186C008756E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8459948024BB186C008756E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8459948224BB186C008756E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8459948524BB186C008756E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8459948224BB186C008756E3 /* VenuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesViewController.swift; sourceTree = "<group>"; };
+		8459948524BB186C008756E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Venues.storyboard; sourceTree = "<group>"; };
 		8459948724BB186E008756E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8459948A24BB186E008756E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8459948C24BB186E008756E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,11 +102,9 @@
 			children = (
 				8459947E24BB186C008756E3 /* AppDelegate.swift */,
 				8459948024BB186C008756E3 /* SceneDelegate.swift */,
-				8459948224BB186C008756E3 /* ViewController.swift */,
-				8459948424BB186C008756E3 /* Main.storyboard */,
-				8459948724BB186E008756E3 /* Assets.xcassets */,
-				8459948924BB186E008756E3 /* LaunchScreen.storyboard */,
-				8459948C24BB186E008756E3 /* Info.plist */,
+				845994A824BB1A69008756E3 /* Modules */,
+				845994A924BB1B11008756E3 /* Base */,
+				845994A024BB19FE008756E3 /* Assets */,
 			);
 			path = "Venues Demo";
 			sourceTree = "<group>";
@@ -120,6 +118,80 @@
 			path = "Venues DemoTests";
 			sourceTree = "<group>";
 		};
+		845994A024BB19FE008756E3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8459948724BB186E008756E3 /* Assets.xcassets */,
+				8459948924BB186E008756E3 /* LaunchScreen.storyboard */,
+				8459948C24BB186E008756E3 /* Info.plist */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		845994A224BB1A1C008756E3 /* Venues */ = {
+			isa = PBXGroup;
+			children = (
+				845994A324BB1A26008756E3 /* Data Access */,
+				845994A424BB1A2E008756E3 /* View Models */,
+				845994A524BB1A35008756E3 /* Controllers */,
+				845994A624BB1A3B008756E3 /* UI */,
+			);
+			path = Venues;
+			sourceTree = "<group>";
+		};
+		845994A324BB1A26008756E3 /* Data Access */ = {
+			isa = PBXGroup;
+			children = (
+				845994A724BB1A4A008756E3 /* Models */,
+			);
+			path = "Data Access";
+			sourceTree = "<group>";
+		};
+		845994A424BB1A2E008756E3 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		845994A524BB1A35008756E3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8459948224BB186C008756E3 /* VenuesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		845994A624BB1A3B008756E3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8459948424BB186C008756E3 /* Venues.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		845994A724BB1A4A008756E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		845994A824BB1A69008756E3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				845994A224BB1A1C008756E3 /* Venues */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		845994A924BB1B11008756E3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		B33AEB06D9F3BD8EBA09652F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +200,6 @@
 				01EE7BA417B7FF7B40688649 /* Pods-Venues DemoTests.debug.xcconfig */,
 				AE554092DA71973B5FF5DB39 /* Pods-Venues DemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -218,7 +289,7 @@
 			files = (
 				8459948B24BB186E008756E3 /* LaunchScreen.storyboard in Resources */,
 				8459948824BB186E008756E3 /* Assets.xcassets in Resources */,
-				8459948624BB186C008756E3 /* Main.storyboard in Resources */,
+				8459948624BB186C008756E3 /* Venues.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8459948324BB186C008756E3 /* ViewController.swift in Sources */,
+				8459948324BB186C008756E3 /* VenuesViewController.swift in Sources */,
 				8459947F24BB186C008756E3 /* AppDelegate.swift in Sources */,
 				8459948124BB186C008756E3 /* SceneDelegate.swift in Sources */,
 			);
@@ -325,12 +396,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8459948424BB186C008756E3 /* Main.storyboard */ = {
+		8459948424BB186C008756E3 /* Venues.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8459948524BB186C008756E3 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Venues.storyboard;
 			sourceTree = "<group>";
 		};
 		8459948924BB186E008756E3 /* LaunchScreen.storyboard */ = {
