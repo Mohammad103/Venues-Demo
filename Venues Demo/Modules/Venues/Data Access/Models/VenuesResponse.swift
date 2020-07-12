@@ -18,7 +18,7 @@ struct VenuesResponse: Mappable {
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {
-        venues <- map["response.groups.items"]
+        venues <- map["response.groups.0.items"]
         totalResults <- map["response.totalResults"]
     }
 }

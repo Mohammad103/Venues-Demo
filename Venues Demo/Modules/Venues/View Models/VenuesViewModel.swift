@@ -42,6 +42,9 @@ class VenuesViewModel {
     }
     
     func loadVenueImages(at index: Int) {
+        #warning("Simulation Code!")
+        return
+        
         guard let venueId = venuesResponse?.venues?[index].id else { return }
         
         RequestManager.beginRequest(withTargetType: VenuesRouter.self, andTarget: VenuesRouter.photos(venueId: venueId), responseModel: VenuePhotosResponse.self) { [weak self] (data, error) in
@@ -66,6 +69,10 @@ class VenuesViewModel {
     // MARK:- Datasource methods
     func numberOfVenues() -> Int {
         return venuesResponse?.venues?.count ?? 0
+    }
+    
+    func venue(at index: Int) -> Venue? {
+        return venuesResponse?.venues?[index]
     }
     
     func title(at index: Int) -> String? {

@@ -13,7 +13,7 @@ struct Constants {
     
     struct Services {
         static let VenuesExplore = "venues/explore"
-        static let VenuesPhotos = "%@/photos"
+        static let VenuesPhotos = "venues/%@/photos"
     }
     
     struct FourSquare {
