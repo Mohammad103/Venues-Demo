@@ -46,9 +46,6 @@ class VenuesViewModel {
     }
     
     func loadVenueImages(at index: Int) {
-        #warning("Simulation Code!")
-        return
-        
         guard let venueId = venuesResponse?.venues?[index].id else { return }
         
         RequestManager.beginRequest(withTargetType: VenuesRouter.self, andTarget: VenuesRouter.photos(venueId: venueId), responseModel: VenuePhotosResponse.self) { [weak self] (data, error) in
