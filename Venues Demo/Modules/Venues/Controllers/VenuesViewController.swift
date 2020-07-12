@@ -187,7 +187,6 @@ extension VenuesViewController: VenuesViewModelDelegate {
         refreshControl?.endRefreshing()
         hideLoadingIndicator()
         tableView.reloadData()
-        showError(withMessage: errorMessage)
     }
     
     func venueImagesLoadedSuccessfully(at index: Int) {
