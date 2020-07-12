@@ -102,6 +102,10 @@
 		8459952F24BB2CC8008756E3 /* VenuePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459952D24BB2CC8008756E3 /* VenuePhoto.swift */; };
 		8459953124BB2CE7008756E3 /* VenuePhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459953024BB2CE7008756E3 /* VenuePhotosResponse.swift */; };
 		8459953224BB2CE7008756E3 /* VenuePhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459953024BB2CE7008756E3 /* VenuePhotosResponse.swift */; };
+		8459953424BB35D0008756E3 /* VenuesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459953324BB35D0008756E3 /* VenuesRouter.swift */; };
+		8459953524BB35D0008756E3 /* VenuesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459953324BB35D0008756E3 /* VenuesRouter.swift */; };
+		8459953724BB39C3008756E3 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459953624BB39C3008756E3 /* DateExtension.swift */; };
+		8459953824BB39C3008756E3 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459953624BB39C3008756E3 /* DateExtension.swift */; };
 		DC86436218F49D26C52110D7 /* Pods_Venues_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8013E4E9288B97AE744F8356 /* Pods_Venues_DemoTests.framework */; };
 		FED0EAD9513B2CE2AE9E6657 /* Pods_Venues_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012A4520DCB2F2D7CD78E30A /* Pods_Venues_Demo.framework */; };
 /* End PBXBuildFile section */
@@ -176,6 +180,8 @@
 		8459952A24BB2393008756E3 /* VenuesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesResponse.swift; sourceTree = "<group>"; };
 		8459952D24BB2CC8008756E3 /* VenuePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuePhoto.swift; sourceTree = "<group>"; };
 		8459953024BB2CE7008756E3 /* VenuePhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuePhotosResponse.swift; sourceTree = "<group>"; };
+		8459953324BB35D0008756E3 /* VenuesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesRouter.swift; sourceTree = "<group>"; };
+		8459953624BB39C3008756E3 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		8FD9676611F7724668F8AA99 /* Pods-Venues Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venues Demo.release.xcconfig"; path = "Target Support Files/Pods-Venues Demo/Pods-Venues Demo.release.xcconfig"; sourceTree = "<group>"; };
 		AE554092DA71973B5FF5DB39 /* Pods-Venues DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venues DemoTests.release.xcconfig"; path = "Target Support Files/Pods-Venues DemoTests/Pods-Venues DemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -275,6 +281,7 @@
 		845994A324BB1A26008756E3 /* Data Access */ = {
 			isa = PBXGroup;
 			children = (
+				8459953324BB35D0008756E3 /* VenuesRouter.swift */,
 				845994A724BB1A4A008756E3 /* Models */,
 			);
 			path = "Data Access";
@@ -384,6 +391,7 @@
 				8459950E24BB1F9E008756E3 /* UIFontExtension.swift */,
 				8459951124BB1FB5008756E3 /* UIColorExtension.swift */,
 				8459952424BB211C008756E3 /* DictionaryExtension.swift */,
+				8459953624BB39C3008756E3 /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -639,10 +647,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8459953424BB35D0008756E3 /* VenuesRouter.swift in Sources */,
 				845994AF24BB1B9E008756E3 /* Constants.swift in Sources */,
 				8459951224BB1FB5008756E3 /* UIColorExtension.swift in Sources */,
 				8459951C24BB20BD008756E3 /* CachingMoyaPlugin.swift in Sources */,
 				8459952824BB2383008756E3 /* Venue.swift in Sources */,
+				8459953724BB39C3008756E3 /* DateExtension.swift in Sources */,
 				8459951924BB209E008756E3 /* AppError.swift in Sources */,
 				8459952524BB211C008756E3 /* DictionaryExtension.swift in Sources */,
 				8459953124BB2CE7008756E3 /* VenuePhotosResponse.swift in Sources */,
@@ -664,9 +674,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8459952C24BB2393008756E3 /* VenuesResponse.swift in Sources */,
+				8459953824BB39C3008756E3 /* DateExtension.swift in Sources */,
 				8459952324BB20FE008756E3 /* MoyaProviderExtensions.swift in Sources */,
 				8459952924BB2383008756E3 /* Venue.swift in Sources */,
 				845994AD24BB1B82008756E3 /* Connectivity.swift in Sources */,
+				8459953524BB35D0008756E3 /* VenuesRouter.swift in Sources */,
 				8459953224BB2CE7008756E3 /* VenuePhotosResponse.swift in Sources */,
 				8459949624BB186E008756E3 /* Venues_DemoTests.swift in Sources */,
 				8459952024BB20D9008756E3 /* ParsingHandler.swift in Sources */,
