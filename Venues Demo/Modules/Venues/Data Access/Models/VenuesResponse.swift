@@ -12,13 +12,13 @@ import ObjectMapper
 struct VenuesResponse: Mappable {
     
     var totalResults: Int?
-    var venuesList: [Venue]?
+    var venues: [Venue]?
     
     
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {
-        venuesList <- map["response.groups.items"]
+        venues <- map["response.groups.items"]
         totalResults <- map["response.totalResults"]
     }
 }
