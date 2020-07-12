@@ -135,7 +135,7 @@
 		8013E4E9288B97AE744F8356 /* Pods_Venues_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Venues_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		841A58DD24BB6EFC00434920 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		841A58E024BB8E3E00434920 /* CLLocationCoordinate2DExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtension.swift; sourceTree = "<group>"; };
-		8459947B24BB186C008756E3 /* Venues Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Venues Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8459947B24BB186C008756E3 /* Venues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Venues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8459947E24BB186C008756E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8459948024BB186C008756E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8459948224BB186C008756E3 /* VenuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesViewController.swift; sourceTree = "<group>"; };
@@ -249,7 +249,7 @@
 		8459947C24BB186C008756E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8459947B24BB186C008756E3 /* Venues Demo.app */,
+				8459947B24BB186C008756E3 /* Venues.app */,
 				8459949124BB186E008756E3 /* Venues DemoTests.xctest */,
 			);
 			name = Products;
@@ -470,7 +470,7 @@
 			);
 			name = "Venues Demo";
 			productName = "Venues Demo";
-			productReference = 8459947B24BB186C008756E3 /* Venues Demo.app */;
+			productReference = 8459947B24BB186C008756E3 /* Venues.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8459949024BB186E008756E3 /* Venues DemoTests */ = {
@@ -890,7 +890,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "MSM.Venues-Demo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Venues;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -909,7 +909,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "MSM.Venues-Demo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Venues;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
