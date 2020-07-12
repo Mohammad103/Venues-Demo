@@ -16,6 +16,9 @@ enum VenueLocationType {
 
 class VenuesViewController: BaseViewController {
 
+    // MARK: - Static
+    private let kMinimumMetersDistanceToUpdate = 500.0
+    
     // MARK: - Outlets & UI
     @IBOutlet weak var typeBarButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
@@ -24,8 +27,7 @@ class VenuesViewController: BaseViewController {
     // MARK: - Properties
     private lazy var venuesViewModel = VenuesViewModel()
     private lazy var locationManager = CLLocationManager()
-    private var latitude: Double?
-    private var longitude: Double?
+    private var currentLocation: CLLocationCoordinate2D?
     private var locationType: VenueLocationType = .realtime
     
     
@@ -70,11 +72,11 @@ class VenuesViewController: BaseViewController {
         if CLLocationManager.locationServicesEnabled() {
             switch CLLocationManager.authorizationStatus() {
             case .authorizedAlways, .authorizedWhenInUse:
-                if let latitude = latitude, let longitude = longitude {
-                    if venuesViewModel.numberOfVenues() == 0 {
+                if let location = currentLocation {
+                    if venuesViewModel.isFirstLoading() {
                         showLoadingIndicator()
                     }
-                    venuesViewModel.loadVenues(latitude: latitude, longitude: longitude)
+                    venuesViewModel.loadVenues(latitude: location.latitude, longitude: location.longitude)
                 }
                 
             default:
@@ -119,13 +121,18 @@ class VenuesViewController: BaseViewController {
 // MARK: - CLLocationManager Delegate Methods
 extension VenuesViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if locationType == .singleUpdate {
+            locationManager.stopUpdatingLocation()
+        }
+        
         if let location = locations.last {
-            latitude = location.coordinate.latitude
-            longitude = location.coordinate.longitude
-            if locationType == .singleUpdate {
-                locationManager.stopUpdatingLocation()
+            if venuesViewModel.isFirstLoading() {
+                currentLocation = location.coordinate
+                loadData()
+            } else if currentLocation != nil, abs(location.coordinate.distance(from: currentLocation!)) > kMinimumMetersDistanceToUpdate {
+                currentLocation = location.coordinate
+                loadData()
             }
-            loadData()
         }
     }
 }

@@ -86,4 +86,11 @@ class VenuesViewModel {
     func thumbnailImageURL(at index: Int) -> String? {
         return venuesResponse?.venues?[index].photo?.thumbnailURL()
     }
+    
+    func isFirstLoading() -> Bool {
+        if venuesResponse == nil {
+            return true
+        }
+        return false
+    }
 }
