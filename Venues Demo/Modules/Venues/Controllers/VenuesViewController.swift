@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import DZNEmptyDataSet
 
 enum VenueLocationType {
     case singleUpdate
@@ -165,12 +166,14 @@ extension VenuesViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - VenuesViewModel Delegate
 extension VenuesViewController: VenuesViewModelDelegate {
     func venuesLoadedSuccessfully() {
+        tableView.emptyDataSetSource = self
         refreshControl?.endRefreshing()
         hideLoadingIndicator()
         tableView.reloadData()
     }
     
     func venuesFailedWithError(errorMessage: String) {
+        tableView.emptyDataSetSource = self
         refreshControl?.endRefreshing()
         hideLoadingIndicator()
         showError(withMessage: errorMessage)
@@ -182,5 +185,26 @@ extension VenuesViewController: VenuesViewModelDelegate {
     
     func venueImagesFailedWithError(errorMessage: String) {
         showError(withMessage: errorMessage)
+    }
+}
+
+
+// MARK: - DZNEmptyDataSet Source & Delegate methods
+extension VenuesViewController: DZNEmptyDataSetSource {
+    func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
+        if venuesViewModel.shouldShowError() {
+            return #imageLiteral(resourceName: "error")
+        }
+        return #imageLiteral(resourceName: "warning")
+    }
+    
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        var text = "No data found !!"
+        if venuesViewModel.shouldShowError() {
+            text = "Something went wrong !!"
+        }
+        let attributes: [NSAttributedString.Key : Any] = [.font: UIFont.appFont(withSize: 16, andWeight: .regular),
+                                                          .foregroundColor: UIColor.black]
+        return NSAttributedString(string: text, attributes: attributes)
     }
 }

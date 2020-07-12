@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.2.1)
+  - DZNEmptyDataSet (1.8.1)
   - Kingfisher (5.14.0):
     - Kingfisher/Core (= 5.14.0)
   - Kingfisher/Core (5.14.0)
@@ -14,6 +15,7 @@ PODS:
   - RevealingSplashView (0.6.0)
 
 DEPENDENCIES:
+  - DZNEmptyDataSet (= 1.8.1)
   - Kingfisher (= 5.14.0)
   - Moya (= 14.0)
   - NVActivityIndicatorView (= 5.0.0)
@@ -23,6 +25,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - DZNEmptyDataSet
     - Kingfisher
     - Moya
     - NVActivityIndicatorView
@@ -31,12 +34,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   NVActivityIndicatorView: f109ed069924ac1b4adbc1ae9cfaeac0be1d6c2c
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   RevealingSplashView: 40c5a770894459736acdc95655eeba0dd30ce91c
 
-PODFILE CHECKSUM: 10d085e2527a6c4c59b17a9b20811c2d2dec3095
+PODFILE CHECKSUM: 219889b12604796a72d25b9167f7c0750620a243
 
 COCOAPODS: 1.9.3

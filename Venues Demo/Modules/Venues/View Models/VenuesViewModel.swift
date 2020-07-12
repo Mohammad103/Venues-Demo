@@ -20,14 +20,17 @@ class VenuesViewModel {
     
     // MARK: - Properties
     private var venuesResponse: VenuesResponse?
+    private var venuesLoadingHadError: Bool = false
     weak var delegate: VenuesViewModelDelegate?
     
     
     // MARK: - Load data methods
     func loadVenues(latitude: Double, longitude: Double) {
+        venuesLoadingHadError = false
         RequestManager.beginRequest(withTargetType: VenuesRouter.self, andTarget: VenuesRouter.venues(latitude: latitude, longitude: longitude), responseModel: VenuesResponse.self) { [weak self] (data, error) in
             guard let weakSelf = self else { return }
             if error != nil {
+                weakSelf.venuesLoadingHadError = true
                 weakSelf.delegate?.venuesFailedWithError(errorMessage: error!.errorMessage)
                 return
             }
@@ -36,6 +39,7 @@ class VenuesViewModel {
                 weakSelf.venuesResponse = response
                 weakSelf.delegate?.venuesLoadedSuccessfully()
             } else {
+                weakSelf.venuesLoadingHadError = true
                 weakSelf.delegate?.venuesFailedWithError(errorMessage: "ERR701 - Error happened while trying to load venues")  // ERR701 for parsing
             }
         }
@@ -92,5 +96,9 @@ class VenuesViewModel {
             return true
         }
         return false
+    }
+    
+    func shouldShowError() -> Bool {
+        return venuesLoadingHadError
     }
 }

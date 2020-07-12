@@ -11,6 +11,7 @@ target 'Venues Demo' do
   pod 'Kingfisher', '5.14.0'
   pod 'RevealingSplashView', '0.6.0'
   pod 'NVActivityIndicatorView', '5.0.0'
+  pod 'DZNEmptyDataSet', '1.8.1'
 
   target 'Venues DemoTests' do
     inherit! :search_paths
