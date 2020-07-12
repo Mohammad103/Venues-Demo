@@ -82,6 +82,18 @@
 		8459951024BB1F9E008756E3 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459950E24BB1F9E008756E3 /* UIFontExtension.swift */; };
 		8459951224BB1FB5008756E3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459951124BB1FB5008756E3 /* UIColorExtension.swift */; };
 		8459951324BB1FB5008756E3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459951124BB1FB5008756E3 /* UIColorExtension.swift */; };
+		8459951624BB207D008756E3 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459951524BB207D008756E3 /* RequestManager.swift */; };
+		8459951724BB207D008756E3 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459951524BB207D008756E3 /* RequestManager.swift */; };
+		8459951924BB209E008756E3 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459951824BB209E008756E3 /* AppError.swift */; };
+		8459951A24BB209E008756E3 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459951824BB209E008756E3 /* AppError.swift */; };
+		8459951C24BB20BD008756E3 /* CachingMoyaPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459951B24BB20BD008756E3 /* CachingMoyaPlugin.swift */; };
+		8459951D24BB20BD008756E3 /* CachingMoyaPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459951B24BB20BD008756E3 /* CachingMoyaPlugin.swift */; };
+		8459951F24BB20D9008756E3 /* ParsingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459951E24BB20D9008756E3 /* ParsingHandler.swift */; };
+		8459952024BB20D9008756E3 /* ParsingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459951E24BB20D9008756E3 /* ParsingHandler.swift */; };
+		8459952224BB20FE008756E3 /* MoyaProviderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459952124BB20FE008756E3 /* MoyaProviderExtensions.swift */; };
+		8459952324BB20FE008756E3 /* MoyaProviderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459952124BB20FE008756E3 /* MoyaProviderExtensions.swift */; };
+		8459952524BB211C008756E3 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459952424BB211C008756E3 /* DictionaryExtension.swift */; };
+		8459952624BB211C008756E3 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459952424BB211C008756E3 /* DictionaryExtension.swift */; };
 		DC86436218F49D26C52110D7 /* Pods_Venues_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8013E4E9288B97AE744F8356 /* Pods_Venues_DemoTests.framework */; };
 		FED0EAD9513B2CE2AE9E6657 /* Pods_Venues_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012A4520DCB2F2D7CD78E30A /* Pods_Venues_Demo.framework */; };
 /* End PBXBuildFile section */
@@ -146,6 +158,12 @@
 		845994D024BB1F82008756E3 /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
 		8459950E24BB1F9E008756E3 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		8459951124BB1FB5008756E3 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		8459951524BB207D008756E3 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		8459951824BB209E008756E3 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		8459951B24BB20BD008756E3 /* CachingMoyaPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingMoyaPlugin.swift; sourceTree = "<group>"; };
+		8459951E24BB20D9008756E3 /* ParsingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingHandler.swift; sourceTree = "<group>"; };
+		8459952124BB20FE008756E3 /* MoyaProviderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaProviderExtensions.swift; sourceTree = "<group>"; };
+		8459952424BB211C008756E3 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		8FD9676611F7724668F8AA99 /* Pods-Venues Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venues Demo.release.xcconfig"; path = "Target Support Files/Pods-Venues Demo/Pods-Venues Demo.release.xcconfig"; sourceTree = "<group>"; };
 		AE554092DA71973B5FF5DB39 /* Pods-Venues DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venues DemoTests.release.xcconfig"; path = "Target Support Files/Pods-Venues DemoTests/Pods-Venues DemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -291,6 +309,7 @@
 		845994A924BB1B11008756E3 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				8459951424BB206C008756E3 /* Network */,
 				8459950D24BB1F8D008756E3 /* Extensions */,
 				845994AA24BB1B66008756E3 /* Helpers */,
 				845994AE24BB1B9E008756E3 /* Constants.swift */,
@@ -348,8 +367,21 @@
 			children = (
 				8459950E24BB1F9E008756E3 /* UIFontExtension.swift */,
 				8459951124BB1FB5008756E3 /* UIColorExtension.swift */,
+				8459952424BB211C008756E3 /* DictionaryExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8459951424BB206C008756E3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8459951524BB207D008756E3 /* RequestManager.swift */,
+				8459951B24BB20BD008756E3 /* CachingMoyaPlugin.swift */,
+				8459951E24BB20D9008756E3 /* ParsingHandler.swift */,
+				8459952124BB20FE008756E3 /* MoyaProviderExtensions.swift */,
+				8459951824BB209E008756E3 /* AppError.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		B33AEB06D9F3BD8EBA09652F /* Pods */ = {
@@ -593,10 +625,16 @@
 			files = (
 				845994AF24BB1B9E008756E3 /* Constants.swift in Sources */,
 				8459951224BB1FB5008756E3 /* UIColorExtension.swift in Sources */,
+				8459951C24BB20BD008756E3 /* CachingMoyaPlugin.swift in Sources */,
+				8459951924BB209E008756E3 /* AppError.swift in Sources */,
+				8459952524BB211C008756E3 /* DictionaryExtension.swift in Sources */,
 				845994AC24BB1B82008756E3 /* Connectivity.swift in Sources */,
+				8459951624BB207D008756E3 /* RequestManager.swift in Sources */,
 				8459948324BB186C008756E3 /* VenuesViewController.swift in Sources */,
 				8459947F24BB186C008756E3 /* AppDelegate.swift in Sources */,
+				8459952224BB20FE008756E3 /* MoyaProviderExtensions.swift in Sources */,
 				8459950F24BB1F9E008756E3 /* UIFontExtension.swift in Sources */,
+				8459951F24BB20D9008756E3 /* ParsingHandler.swift in Sources */,
 				8459948124BB186C008756E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,11 +643,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8459952324BB20FE008756E3 /* MoyaProviderExtensions.swift in Sources */,
 				845994AD24BB1B82008756E3 /* Connectivity.swift in Sources */,
 				8459949624BB186E008756E3 /* Venues_DemoTests.swift in Sources */,
+				8459952024BB20D9008756E3 /* ParsingHandler.swift in Sources */,
 				8459951324BB1FB5008756E3 /* UIColorExtension.swift in Sources */,
+				8459952624BB211C008756E3 /* DictionaryExtension.swift in Sources */,
+				8459951724BB207D008756E3 /* RequestManager.swift in Sources */,
+				8459951D24BB20BD008756E3 /* CachingMoyaPlugin.swift in Sources */,
 				8459951024BB1F9E008756E3 /* UIFontExtension.swift in Sources */,
 				845994B024BB1B9E008756E3 /* Constants.swift in Sources */,
+				8459951A24BB209E008756E3 /* AppError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
