@@ -44,7 +44,7 @@ extension BaseViewController {
         let containerView = UIView(frame: CGRect(x: 0, y: 0, width: indicatorViewWidth * 2, height: indicatorViewHeight * 2))
         containerView.tag = loadingIndicatorViewTag
         containerView.backgroundColor = UIColor.gray.withAlphaComponent(0.1)
-        containerView.center = self.view.center
+        containerView.center = CGPoint(x: view.bounds.width / 2, y: (view.bounds.height - indicatorViewHeight) / 2)
         containerView.layer.cornerRadius = 15.0
         
         indicatorView.center = CGPoint(x: containerView.bounds.width / 2, y: containerView.bounds.height / 2)
