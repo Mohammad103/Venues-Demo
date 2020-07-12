@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import DZNEmptyDataSet
+import RevealingSplashView
 
 enum VenueLocationType {
     case singleUpdate
@@ -36,12 +37,20 @@ class VenuesViewController: BaseViewController {
         super.viewDidLoad()
         
         venuesViewModel.delegate = self
+        setupAnimatedSplashScreen()
         setupUI()
         configureLocation()
     }
     
     
     // MARK: - Helpers
+    private func setupAnimatedSplashScreen() {
+        let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "radar"), iconInitialSize: CGSize(width: 125, height: 125), backgroundColor: UIColor.defaultAppThemeColor)
+        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        keyWindow?.addSubview(revealingSplashView)
+        revealingSplashView.startAnimation()
+    }
+    
     private func configureLocation() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
