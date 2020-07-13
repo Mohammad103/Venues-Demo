@@ -160,6 +160,13 @@ extension VenuesViewController: UITableViewDataSource, UITableViewDelegate {
         if let venue = venuesViewModel.venue(at: indexPath.row) {
             cell.configureCell(venue: venue)
         }
+        if (tableView.indexPathsForVisibleRows?.contains(indexPath) ?? false) {
+            if let imageURL = venuesViewModel.thumbnailImageURL(at: indexPath.row) {
+                cell.configureCellImage(imageURL: imageURL)
+            } else {
+                venuesViewModel.loadVenueImages(at: indexPath.row)
+            }
+        }
         return cell
     }
     
